@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ========= Set base 10 font size ========= */
+html {
+  font-size: 62.5%;
+}
+ 
+body {
+    color: #555555;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+
+/* ========== General Styles ========== */
+    
+    /* Links and Anchors */
+    a,
+    a:link,
+    a:visited {
+    color: #5e859c;
+    text-decoration: none;
+    }
+     
+    a:hover,
+    a:active,
+    a:focus {
+    color: #415c6c;
+    }
+
+
+
+        /* Flexible Media */
+
+            /* source: http://alistapart.com/article/creating-intrinsic-ratios-for-video */
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio => 9/16 = 56.25% */
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+    }
+     
+    .video-container iframe {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+     
+    .hero-wrapper {
+    border-bottom: 1px solid #d4d4d4;
+    padding-bottom: 21px;
+    padding-bottom: 2.1rem;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+    }
+
+    /* Lists */
+    ul {
+	    padding: 0;
+	    margin-left: 20px;
+    }
+
+
+/* ========== Layout ========== */
+.container {
+margin: 0 auto;
+max-width: 60em;
+}
+
+/* Apply a natural box layout model to all elements
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+/* columns*/
+.main, .portfolio-item {
+	float: left;
+}
+ 
+.sidebar {
+	float: right;
+}
+ 
+.main {
+	width: 65%;
+}
+ 
+.sidebar, .portfolio-item {
+	width: 30%;
+}
+
+    /* Gutters */
+    .gutter-r {
+    	margin: 0 2.5% 0 0;
+    }
+     
+    .gutter-l {
+    	margin: 0 0 0 2.5%;
+    }
+     
+    .gutter-l-r {
+    	margin: 0 2.5%;
+    }
+
+        /* Mobile Navigation */
+    .js #menu-icon {
+    display: none;
+    }
+
+/* ========== Navigation ========== */
+    
+    .top-nav {
+border-top: 2px solid #415c6c;
+border-bottom: 1px solid #dedede;
+margin-bottom: 21px;
+margin-bottom: 2.1rem;
+}
+
+    .top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    .top-nav li {
+    float: left;
+    }
+
+    .top-nav a {
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 15px;
+    }
+
+/* ========== Modules ========== */
+  /* Header */
+.page-header {
+margin-top: 42px;
+margin-top: 4.2rem;
+}
+.ir {
+background-color: transparent;
+border: 0;
+overflow: hidden;
+*text-indent: -9999px;
+}
+ 
+.ir:before {
+content: "";
+display: block;
+width: 0;
+height: 150%;
+}
+ 
+.site-title a {
+background: url("../images/graphics/logo.png") no-repeat 0 0;
+display: block;
+height: 70px;
+}
+
+    .tagline {
+    font: normal 100 14px Baskerville, Georgia, serif;
+    font-size: 1.4rem;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+    }
+     
+    .amp {
+    font-style: italic;
+    }
+    /* Portrait */
+    .portrait {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    }
+    .portrait .caption {
+    color: #888888;
+    font-size: 12px;
+    font-size: 1.2rem;
+    }
+
+
+
+
+/* ==================================================
+Micro clearfix hack to address parent containers that collapse
+height with floated child elements. To use, simply add the
+class "cf" to any container with floated child elements.
+http://nicolasgallagher.com/micro-clearfix-hack/
+================================================== */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+    /* Contact Form */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+    color: #555;
+    display: block;
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+    width: 100%;
+    }
+
+        textarea {
+    height: 150px;
+    }
+        label {
+    font-weight: bold;
+    }
+        .form-button {
+    background-color: #eaeaea;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    color: #555;
+    padding: 8px 15px;
+    }
+     
+    .form-button:hover,
+    .form-button:active,
+    .form-button:focus {
+    background-color: #dedede;
+    }
+        .contact-form {
+    margin-bottom: 21px;
+    margin-bottom: 2.1rem;
+    }
+        /* Footer */
+    .page-footer {
+    border-top: 1px solid #415c6c;
+    margin-top: 21px;
+    margin-top: 2.1rem;
+    }
+        .credit {
+    float: left;
+    width: 50%;
+    }
+        .connect {
+    list-style: none;
+    margin: 7px 0;
+    text-align: right;
+    }
+        .connect li {
+    display: inline;
+    padding: 0 5px;
+    }
+        .connect li:last-child {
+    padding-right: 0;
+    }
+        .connect a {
+    font-size: 20px;
+    font-size: 2rem;
+    }
+
+        /* ========== @font-face icon fonts w/ svg & png fallbacks ========== */
+    @font-face {
+    font-family: 'icomoon';
+    src: url("fonts/icomoon.eot?m838ql");
+    src: url("fonts/icomoon.eot?#iefixm838ql") format("embedded-opentype"), url("fonts/icomoon.woff?m838ql") format("woff"), url("fonts/icomoon.ttf?m838ql") format("truetype"), url("fonts/icomoon.svg?m838ql#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    }
+    /* browsers that support @font-face */
+    .fontface [class^="icon-"],
+    .fontface [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+     
+    .fontface .icon-linkedin:before {
+    content: "\e600";
+    }
+     
+    .fontface .icon-google-plus:before {
+    content: "\e601";
+    }
+     
+    .fontface .icon-facebook:before {
+    content: "\e602";
+    }
+     
+    .fontface .icon-twitter:before {
+    content: "\e603";
+    }
+     
+    .fontface .icon-youtube:before {
+    content: "\e604";
+    }
+     
+    /* browsers with no @font-face or svg support */
+    .no-fontface [class*="icon-"],
+    .no-svg [class*="icon-"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/graphics/sprites.svg");
+    background-repeat: no-repeat;
+    }
+     
+    .no-svg [class*="icon-"] {
+    background-image: url("../images/graphics/sprites.png");
+    }
+     
+    .no-fontface .icon-google-plus,
+    .no-svg .icon-google-plus {
+    background-position: -37px 0;
+    width: 22px;
+    }
+     
+    .no-fontface .icon-twitter,
+    .no-svg .icon-twitter {
+    background-position: -101px 0;
+    width: 22px;
+    }
+     
+    .no-fontface .icon-facebook,
+    .no-svg .icon-facebook {
+    background-position: -75px 0;
+    width: 10px;
+    }
+     
+    .no-fontface .icon-linkedin,
+    .no-svg .icon-linkedin {
+    background-position: 0 0;
+    width: 21px;
+    }
+     
+    .no-fontface .icon-youtube,
+    .no-svg .icon-youtube {
+    background-position: -139px 0;
+    width: 21px;
+    }
+        /* ========== Assistive Text ========== */
+    /* Hide visually but readable by screen readers.
+    source: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    .screen-reader {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    }
+        /* ========== Media Queries ========== */
+    /* Below 992px: 992px/16px = 62em */
+    @media only screen and (max-width: 62em) {
+     /* ========== Layout ========== */
+.container {
+padding: 20px;
+padding: 2rem;
+}
+     
+    }
+
+    /* Below 700px: 700px/16px = 43.75em */
+    @media only screen and (max-width: 43.75em) {
+      /* ========== Typography ========== */
+body {
+font-size: 12px;
+font-size: 1.2rem;
+}
+     /* ========== Layout ========== */
+/* Columns */
+.main,
+.sidebar{
+float: none;
+width: 100%;
+}
+.portfolio .portfolio-item {
+width: 46.875%;
+}
+ 
+/* Gutters */
+.portfolio .gutter-l,
+.portfolio .gutter-r,
+.portfolio .gutter-l-r {
+margin: 0;
+}
+.portfolio .med-gutter-l {
+clear: right;
+margin: 0 0 0 2.5%;
+}
+ 
+.portfolio .med-gutter-r {
+clear: left;
+margin: 0 2.5% 0 0;
+}
+
+/* ========== Modules ========== */
+/* Header */
+.site-title a {
+background-position: 50% 0;
+}
+ 
+.tagline {
+text-align: center;
+}
+ 
+/* Navigation */
+.top-nav a {
+padding: 7px;
+}
+ 
+/* Sidebar */
+.sidebar {
+background-color: #f7f7f7;
+border: 1px solid #dedede;
+padding: 1px 20px;
+}
+ 
+/* Footer */
+.connect li {
+padding: 0 10px;
+}
+}
+     
+    /* Between 600px and 699px: 600px/16px = 37.5em; 700px/16px = 43.75em */
+    @media only screen and (min-width: 37.5em) and (max-width: 43.75em) {
+     
+    
+    .primary {
+float: left;
+}
+ 
+.secondary {
+float: right;
+}
+ 
+.primary,
+.secondary {
+width: 46.875%;
+}
+}
+    /* Below 480px: 480px/16px = 30em */
+    @media only screen and (max-width: 30em) {
+    /* ========== Layout ========== */
+    /* Columns */
+    .feature .portfolio-item {
+    float: none;
+    margin: 0;
+    width: 100%;
+    }
+     
+    /* ========== Modules ========== */
+    /* Footer */
+    .credit,
+    .connect {
+    float: none;
+    width: 100%;
+    text-align: center;
+    }
+     /* ========== Modules ========== */
+/* Header */
+.js .page-header {
+border-bottom: 1px solid #415c6c;
+}
+ 
+.no-js .page-header {
+margin-top: 0;
+}
+
+ .js #menu-icon {
+background: #f7f7f7;
+border-bottom: 1px solid #dedede;
+display: block;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+}
+.js #menu-icon a {
+color: #415c6c;
+font-weight: bold;
+text-transform: uppercase;
+cursor: pointer;
+display: block;
+padding: 12px 0 12px 20px;
+padding: 1.2rem 0 1.2rem 20px;
+}
+.js .top-nav {
+border: none;
+position: fixed;
+top: 20px;
+top: 2rem;
+left: 0;
+z-index: 100;
+width: 100%;
+}
+ 
+.js .top-nav ul {
+background-color: #415c6c;
+display: none;
+margin-top: 21px;
+margin-top: 2.1rem;
+width: inherit;
+z-index: 100;
+}
+
+.js .top-nav li {
+float: none;
+}
+ 
+.js .top-nav a {
+border-bottom: 1px solid #eaeaea;
+color: #fff;
+padding: 15px 20px;
+padding: 1.5rem 20px;
+}
+.js .top-nav a[href="/digskills-603/rwd-02/contact.html"] {
+border-bottom: none;
+}
+ 
+.js .top-nav a:hover,
+.js .top-nav a:active,
+.js .top-nav a:focus {
+background-color: #5e859c;
+}
+ /* Header */
+.js .page-header {
+border-bottom: 1px solid #415c6c;
+}
+ 
+.no-js .page-header {
+margin-top: 0;
+}
+    }   
+
+        @media only screen and (max-width: 22.5em) {
+    /* Columns */
+    .portfolio .portfolio-item {
+    float: none;
+    width: 100%;
+    }
+     
+    .portfolio .med-gutter-l,
+    .portfolio .med-gutter-r {
+    margin: 0;
+    }
+    } 
+

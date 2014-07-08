@@ -1,7 +1,14 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(class="no-js")
+	head
+		meta(charset="utf-8")
+		title= title 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		meta(name="description", content="Enter a short description of this webpage")
+		link(rel='stylesheet', href='stylesheets/normalize.css')
+		link(rel='stylesheet', href='stylesheets/styles.css')
+		script(src="javascripts/modernizr.custom.js")
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js")
+		block head
+	body
+		block content

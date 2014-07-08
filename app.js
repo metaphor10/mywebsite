@@ -1,14 +1,22 @@
 var express = require('express');
 var path = require('path');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var flash    = require('connect-flash');
 var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session  = require('express-session');
 
-var routes = require('./routes/index');
+var configDB = require('./config/database.js');
+var app = express();
+mongoose.connect(configDB.url);
+require('./config/passport')(passport);
+var routes = require('./routes/index')(passport);
 var users = require('./routes/users');
 
-var app = express();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,6 +28,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch', saveUninitialized: true,
+                 resave: true })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
 app.use('/', routes);
 app.use('/users', users);

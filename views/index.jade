@@ -1,5 +1,36 @@
 extends layout
+block head
+	link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.13.1/css/mediaelementplayer.min.css")
+
 
 block content
-  h1= title
-  p Welcome to #{title}
+	include skipnav
+	div(class="container")
+		include header
+		#content
+			div(role="main")
+				.hero-wrapper
+					.video-container
+						iframe(src="http://player.vimeo.com/video/16323471?title=0&amp;byline=0&amp;portrait=0&amp;color=415c6c")
+				div(class="feature cf")
+					article(class="feature-01 portfolio-item gutter-r")
+						a(href="#")
+							h2.article-title Photo
+							img(src="images/thumbs/elephant-thumb.jpg", alt="Elephant")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					article(class="feature-02 portfolio-item gutter-l-r")
+						a(href="#")
+							h2.article-title Film
+							img(src="images/thumbs/staining-thumb.jpg", alt="Clouds")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					article(class="feature-03 portfolio-item gutter-l")
+						a(href="#")
+							h2.article-title Web
+							img(src="images/thumbs/railway-thumb.jpg", alt="Train Tracks")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+		include footer
+
+
+
+

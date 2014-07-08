@@ -1,0 +1,41 @@
+extends layout
+
+block content
+	include skipnav 
+	.container
+		include header
+		#content(class="cf")
+			div(role="main")
+				h1.page-title Portfolio
+				.portfolio
+					article.article-01.portfolio-item.gutter-r.med-gutter-r
+						a(href="#")
+							h2.article-title Elephant
+							img(src="images/thumbs/elephant-thumb.jpg", alt="Elephant")
+						p Add some dummy text
+					article.article-02.portfolio-item.gutter-l-r.med-gutter-l
+						a(href="#")
+							h2.article-title Fence
+							img(src="images/thumbs/fence-thumb.jpg", alt="Fence")
+						p Add some dummy text
+					article.article-03.portfolio-item.gutter-l.med-gutter-r
+						a(href="#")
+							h2.article-title Train Tracks
+							img(src="images/thumbs/railway-thumb.jpg", alt="Train Tracks")
+						p Add some dummy text
+					article.article-04.portfolio-item.gutter-r.med-gutter-l
+						a(href="#")
+							h2.article-title Clouds
+							img(src="images/thumbs/staining-thumb.jpg", alt="Clouds")
+						p Add some dummy text
+					article.article-05.portfolio-item.gutter-l-r.med-gutter-r
+						a(href="#")
+							h2.article-title Stairways
+							img(src="images/thumbs/stairways-thumb.jpg", alt="Stairways")
+						p Add some dummy text
+					article.article-06.portfolio-item.gutter-l.med-gutter-l
+						a(href="#")
+							h2.article-title Strips
+							img(src="images/thumbs/stripes-thumb.jpg", alt="Strips")
+						p Add some dummy text		
+		include footer

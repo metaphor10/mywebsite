@@ -1,0 +1,20 @@
+extends layout
+
+block content 
+	include skipnav
+	.container
+		include header
+		#content(class="cf")
+			.main(role="main")
+				form.contact-form(method="post", role="form", action="/digskills-603/rwd-01/contactsubmit")
+					label(for="name", accesskey="n") Name
+					input#name(name="name1", type="text", placeholder="(required)", required="required")
+					label(for="email", accesskey="e") email
+					input#email(name="email1", type="email", placeholder="(required)", required="required")
+					label(for="subject", accesskey="s") Subject	
+					input#subject(name="subject", type="text")
+					label(for="message", accesskey="m") Message
+					textarea#message(name="message")
+					input#submit(class="form-button", name="submit", type="submit", value="send")
+			include sidebar
+		include footer
