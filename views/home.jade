@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	include skipnav
+	.container
+		include header
+		#content.cf
+			.main(role="main")
+				h1 hello #{user.local.name1}
+				
+				p Your choices
+
+		include footer

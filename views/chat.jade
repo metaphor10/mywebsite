@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	include skipnav
+	.container
+		include header
+		#content.cf
+			.main(role="main")
+				header
+					h1 Chat with a representative
+				input(type='text', tabindex="1")#pseudoInput
+				button(tabindex="2")#pseudoSet Set Pseudo
+				#chatEntries
+				#chatControles
+					input(type='text', tabindex="3")#messageInput
+					button(tabindex='4')#submit Send
+		include footer
+				

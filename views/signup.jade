@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	include skipnav
+	.container
+		include header
+		#content.cf
+			.main(role="main")
+				form.contact-form(action="signup", method="post")
+					label(for="name", accesskey="n") Name
+					input#name(name="name1", type="text") 
+					label(for="email", accesskey="e") Email
+					input#email(name="email", type="text")
+					label(for="password", accesskey="p") Password
+					input#subject(name="password", type="text")
+					input#submit.form-button(name="submit", type="submit", value="Signup")
+		include footer
+

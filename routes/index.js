@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var sendgrid = require('sendgrid')('metaphor', 'a1492sus');
 
 module.exports = function(passport){
 // normal routes ===============================================================
@@ -8,7 +9,7 @@ module.exports = function(passport){
 	router.get('/', function(req, res) {
 		res.render('index', {title: 'Node Authentication'});
 	});
-/*	router.get('/about', function(req, res) {
+	router.get('/about', function(req, res) {
   res.render('about', { title: 'about | Ariel Borochov' });
 });
 router.get('/contact', function(req, res) {
@@ -17,7 +18,24 @@ router.get('/contact', function(req, res) {
 });
 router.get('/portfolio', function(req, res) {
   res.render('portfolio', { title: 'portfolio | Ariel Borochov' });
-});*/
+});
+router.post('/contactsubmit', function(req, res) {
+    var payload   = {
+  to      : 'ariel.borochov@gmail.com',
+  from    : req.body.email1,
+  subject : req.body.subject,
+  text    : req.body.message
+}
+
+sendgrid.send(payload, function(err, json) {
+  if (err) { console.error(err); }
+  console.log(json);
+  res.render('index', { title: 'Home | Ariel Borochov' });
+});
+
+  
+});
+
 
 	// PROFILE SECTION =========================
 	router.get('/profile', isLoggedIn, function(req, res) {
@@ -35,6 +53,14 @@ router.get('/portfolio', function(req, res) {
 			title: 'home'
 		});
 	});
+	router.get('/chat', isLoggedIn, function(req, res){
+
+		res.render('chat', {
+			user: req.user,
+			title: 'chat'
+		});
+	});
+
 
 	// LOGOUT ==============================
 	router.get('/logout', function(req, res) {

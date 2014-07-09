@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch', saveUninitialized: true,
+app.use(session({ secret: '12345', saveUninitialized: true,
                  resave: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions

@@ -8,10 +8,18 @@ header(role="banner" class="page-header")
 	nav(role="navigation" class="top-nav cf")
 		ul
 			li
-				a(href="/digskills-603/rwd-02/") Home
+				a(href="/") Home
 			li
-				a(href="/digskills-603/rwd-02/about") About
+				a(href="/about") About
 			li
-				a(href="/digskills-603/rwd-02/portfolio") Portfolio
+				a(href="/portfolio") Portfolio
 			li
-				a(href="/digskills-603/rwd-02/contact") Contact
+				a(href="/contact") Contact
+			if locals.user
+				li
+					a(href="/logout") Logout
+				li
+					a(href="/chat") Chat
+			else
+				li
+					a(href="/login") Login
