@@ -22,7 +22,8 @@ router.get('/portfolio', function(req, res) {
 router.post('/contactsubmit', function(req, res) {
     var payload   = {
   to      : 'ariel.borochov@gmail.com',
-  from    : req.body.email1,
+  from 	  : 'ariel.borochov@gmail.com',
+  replyto : req.body.email1,
   subject : req.body.subject,
   text    : req.body.message
 }
