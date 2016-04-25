@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var sendgrid = require('sendgrid')('metaphor', 'a1492sus');
+var sendgrid = require('sendgrid')('', '');
 
 module.exports = function(passport){
 // normal routes ===============================================================
